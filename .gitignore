@@ -1,0 +1,19 @@
+# Model files
+/fine_tuned_gpt2/
+
+# Data files
+tech_news.json
+tech_news.txt
+tech_news_cleaned.json
+training_data.json
+
+
+
+
+# Python cache files
+__pycache__/
+
+
+
+
+

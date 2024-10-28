@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Chat</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link your CSS -->
+</head>
+<body>
+    <div class="container">
+        <h1>Tech Chat</h1>
+        <textarea id="prompt" placeholder="Ask your question..."></textarea>
+        <button id="submit">Generate</button>
+        <div id="response"></div>
+    </div>
+
+    <script>
+        document.getElementById("submit").onclick = async function() {
+            const prompt = document.getElementById("prompt").value;
+
+            const response = await fetch("http://127.0.0.1:8000/generate", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({ prompt: prompt }),
+            });
+
+            if (response.ok) {
+                const data = await response.json();
+                document.getElementById("response").innerText = data.response;
+            } else {
+                console.error("Error:", response.statusText);
+                document.getElementById("response").innerText = "Error: " + response.statusText;
+            }
+        };
+    </script>
+</body>
+</html>
