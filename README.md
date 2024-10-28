@@ -18,22 +18,25 @@ To run this project locally, follow these steps:
    cd tech-chatbot
 
 2. Create and activate a virtual environment (optional but recommended):
+   ```bash
   python -m venv venv
   source venv/bin/activate  # On Windows use `venv\Scripts\activate`
 
-3. Install the required packages
+4. Install the required packages
+   ```python
   pip install -r requirements.txt
 
-4. Download the necessary NLTK data files if you haven't already:
+6. Download the necessary NLTK data files if you haven't already:
       ```python
       import nltk
       nltk.download('punkt')
       nltk.download('stopwords')
       nltk.download('wordnet')
-6. Make sure to have your tech news dataset and other required files in the proper directories.
+7. Make sure to have your tech news dataset and other required files in the proper directories.
 
 Usage
 1. Start the FastAPI server:
+      ```python
       uvicorn backend:app --reload
 
 
