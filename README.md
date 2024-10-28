@@ -25,11 +25,12 @@ To run this project locally, follow these steps:
   pip install -r requirements.txt
 
 4. Download the necessary NLTK data files if you haven't already:
+      ```python
       import nltk
       nltk.download('punkt')
       nltk.download('stopwords')
       nltk.download('wordnet')
-5. Make sure to have your tech news dataset and other required files in the proper directories.
+6. Make sure to have your tech news dataset and other required files in the proper directories.
 
 Usage
 1. Start the FastAPI server:
