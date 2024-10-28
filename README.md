@@ -19,12 +19,12 @@ To run this project locally, follow these steps:
 
 2. Create and activate a virtual environment (optional but recommended):
    ```bash
-  python -m venv venv
-  source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+   python -m venv venv
+   source venv/bin/activate  # On Windows use `venv\Scripts\activate`
 
 4. Install the required packages
    ```python
-  pip install -r requirements.txt
+   pip install -r requirements.txt
 
 6. Download the necessary NLTK data files if you haven't already:
       ```python
